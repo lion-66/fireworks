@@ -1,0 +1,279 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>放烟花</title>
+    <link rel="stylesheet" href="./favicon.ico">
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            box-sizing: border-box;
+            cursor:pointer;
+        }
+        body{
+            background: #000;
+        }
+        .lantern-box{
+            position: relative;
+            left: 10%;
+            width: 120px;
+            height: 90px;
+            background: #d8000f;
+            margin: 50px 0 0 0;
+            border-radius: 50%;
+            box-shadow: -5px 5px 50px 4px #fa6c00;
+            animation: swing 3s infinite ease-in-out;
+            transform-origin: 60px -50px;
+        }
+        .lantern-box:nth-child(2){
+            top: -141px;
+            left: 35%;
+        }
+        .lantern-box:nth-child(3){
+            left: 59%;
+            top: -280px;
+        }
+        .lantern-box:nth-child(4){
+            left: 85%;
+            top: -420px;
+        }
+        @keyframes swing {
+            0%,100%{
+                transform: rotate(15deg);
+            }
+            50%{
+                transform:rotate(-5deg);
+            }
+        }
+        .lantern-box::before{
+            content: '';
+            position: absolute;
+            top: -7px;
+            left: 50%;
+            margin-left: -30px;
+            width: 60px;
+            height: 12px;
+            background: linear-gradient(to right,#dc8f03,#ffa500,#dc8f03,#ffa500,#dc8f03);
+            border: 1px solid #dc8f03;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .lantern-box::after{
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            margin-left: -20px;
+            width: 40px;
+            height: 12px;
+            background: linear-gradient(to right,#dc8f03,#ffa500,#dc8f03,#ffa500,#dc8f03);
+            border: 1px solid #dc8f03;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .lantern-top{
+            width: 2px;
+            height: 50px;
+            background: #dc8f03;
+            position: absolute;
+            left: 60px;
+            top: -50px;
+        }
+        .lantern-circle{
+            width: 100px;
+            height: 90px;
+            border-radius: 50%;
+            border: 2px solid #dc8f03;
+            margin: 12px 8px 8px 8px;
+        }
+        .lantern-rect{
+            width: 45px;
+            height: 90px;
+            line-height: 90px;
+            text-align: center;
+            color: #dc8f03;
+            font-size: 30px;
+            font-weight: bold;
+            border-radius: 50%;
+            border: 2px solid #dc8f03;
+            margin: -2px 8px 8px 26px;
+        }
+        .lantern-bottom{
+            width: 1px;
+            height: 20px;
+            background: #ffa500;
+            margin: -10px 0 0 60px;
+            position: relative;
+        }
+        .lantern-bottom-line{
+            position: absolute;
+            width: 8px;
+            left: -3px;
+        }
+        .lantern-bottom .lantern-bottom-line{
+            height: 8px;
+            top: 19px;
+            background: #ffa500;
+            border-radius: 50%;
+            z-index: 3;
+        }
+        .lantern-bottom-circle{
+            position: absolute;
+            left: -3px;
+            top: 26px;
+            animation: swing1 3s infinite ease-in-out;
+        }
+        @keyframes swing1 {
+            0%,100%{
+                transform: rotate(15deg);
+            }
+            50%{
+                transform:rotate(-15deg);
+            }
+        }
+        .line{
+            display: block;
+            width: 1px;
+            height: 120px;
+            background: #ffa500;
+            position: absolute;
+            left: 0;
+            transform-origin: top left;
+            transform: scale(0.2);
+        }
+        .line:nth-child(2){
+            left: 1px;
+            height: 115px;
+        }
+        .line:nth-child(3){
+            left: 2px;
+            height: 135px;
+        }
+        .line:nth-child(4){
+            left: 3px;
+            height: 145px;
+        }
+        .line:nth-child(5){
+            left: 4px;
+            height: 135px;
+        }
+        .line:nth-child(6){
+            left: 5px;
+            height: 145px;
+        }
+        .line:nth-child(7){
+            left: 6px;
+            height: 145px;
+        }
+        .line:nth-child(8){
+            left: 7px;
+            height: 120px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="lantern-box">
+    <!--    顶部线-->
+    <div class="lantern-top"></div>
+    <!--    中间部分-->
+    <div class="lantern-circle">
+        <div class="lantern-rect">
+            <span>新</span>
+        </div>
+    </div>
+<!--    底部线-->
+    <div class="lantern-bottom">
+        <div class="lantern-bottom-line"></div>
+        <div class="lantern-bottom-circle">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+    </div>
+</div>
+<div class="lantern-box">
+    <!--    顶部线-->
+    <div class="lantern-top"></div>
+    <!--    中间部分-->
+    <div class="lantern-circle">
+        <div class="lantern-rect">
+            <span>年</span>
+        </div>
+    </div>
+    <!--    底部线-->
+    <div class="lantern-bottom">
+        <div class="lantern-bottom-line"></div>
+        <div class="lantern-bottom-circle">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+    </div>
+</div>
+<div class="lantern-box">
+    <!--    顶部线-->
+    <div class="lantern-top"></div>
+    <!--    中间部分-->
+    <div class="lantern-circle">
+        <div class="lantern-rect">
+            <span>快</span>
+        </div>
+    </div>
+    <!--    底部线-->
+    <div class="lantern-bottom">
+        <div class="lantern-bottom-line"></div>
+        <div class="lantern-bottom-circle">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+    </div>
+</div>
+<div class="lantern-box">
+    <!--    顶部线-->
+    <div class="lantern-top"></div>
+    <!--    中间部分-->
+    <div class="lantern-circle">
+        <div class="lantern-rect">
+            <span>乐</span>
+        </div>
+    </div>
+    <!--    底部线-->
+    <div class="lantern-bottom">
+        <div class="lantern-bottom-line"></div>
+        <div class="lantern-bottom-circle">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+    </div>
+</div>
+<!--<img src="./xk.jpeg" id="img" width="100%" alt="">-->
+<!--<script type="text/javascript" src="js/Main.js"></script>-->
+<!--<script src="example.js"></script>-->
+<script src="example2.js"></script>
+</body>
+</html>
